@@ -1,0 +1,40 @@
+/*
+In the deafault CSS box-model (box-sizing: content-box), padding
+and border values were added on top of the width and height
+of the rendered content box.
+
+When using border-box instead, when we define whe width and height,
+it includes everything including border, padding and content box.
+*/
+
+/*
+Pseudo-elements ::before and ::after were used to insert content
+inside a HTML element, before and after the actual content of it.
+
+By declaring ::before and (::after with box-sizing: border-box),
+we can ensure that content added by these pseudo selectors were
+also calculated in the width and height of an element.
+*/
+
+/* 
+Pseudo-elements and were used to specify a specific part of an 
+element, to insert content, whereby pseudo-classs is to determine a
+specific state of an element.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Define a fallback color for body */
+body {
+  margin: 0;
+  background: #2e97a7;
+  background: linear-gradient(to right, #2e97a7, #362fd9);
+}
+
+.calculator-grid {
+  display: grid;
+}
