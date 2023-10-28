@@ -53,6 +53,7 @@ direct childs of the .calculator-grid becomes grid items automatically
   6rem.
   */
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
 }
 
 /* 
@@ -60,6 +61,27 @@ Change span-two buttons into taking up 2 spaces
 */
 .span-two {
   grid-column: span 2;
+}
+
+/*
+> Only slect children that are direct decendan
+of .calculator-grid
+*/
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+Focus state => buttion / input being focused when click
+or travel with tab etc.
+*/
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* 
@@ -71,4 +93,35 @@ The output screen of the calculator
   /* Partial transparent */
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
+  /* Determine the direction laid out of the flex items */
+  flex-direction: column;
+  /*
+  Flexbox property used to control the alignments of flex items on
+  corss axis (perpendocuilar to the main-axis defined in flex-direction.
+  */
+  align-items: flex-end;
+  /*
+  Alight flex items on the main-axis as determined by flex-direction.
+  Distribute the space evenly between flex-items
+  */
+  justify-content: space-around;
+  padding: 0.5rem;
+
+  /* 
+  Used by CSS to determine how text break and wrap inside an element.
+  break-word => If does not fit, break at the nearest possible character.
+  word-break => allow the breaking in between of words
+  */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
 }
