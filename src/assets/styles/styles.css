@@ -35,6 +35,40 @@ body {
   background: linear-gradient(to right, #2e97a7, #362fd9);
 }
 
+/*
+display: grid => transform the element into a grid container, 
+can use CSS grid layout to create a complex layout structure
+with rows and columns within the container
+
+direct childs of the .calculator-grid becomes grid items automatically
+*/
 .calculator-grid {
   display: grid;
+  margin-top: 2rem;
+  /* Create 4 columns, each with the width of 6rem */
+  grid-template-columns: repeat(4, 6rem);
+  /* 
+  Minimum size = 7rem, scale with auto.
+  repeat 5 rows, with each has a height of
+  6rem.
+  */
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+/* 
+Change span-two buttons into taking up 2 spaces
+*/
+.span-two {
+  grid-column: span 2;
+}
+
+/* 
+The output screen of the calculator
+*/
+.output {
+  /* Span from first space to the last space */
+  grid-column: 1 / -1;
+  /* Partial transparent */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
 }

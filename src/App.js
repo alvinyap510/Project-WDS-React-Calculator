@@ -8,7 +8,6 @@ function App() {
         <div className="current-operand"></div>
       </div>
       <button className="span-two">AC</button>
-      <button>AC</button>
       <button>DEL</button>
       <button>÷</button>
       <button>1</button>
