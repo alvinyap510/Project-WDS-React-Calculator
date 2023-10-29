@@ -7,3 +7,7 @@
 ## Introduction
 
 A micro project that uses React to build a calculator.
+
+## Deployment
+
+- [Deployment with Tiiny Host](https://alyap-react-calculator.tiiny.site/)
