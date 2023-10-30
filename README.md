@@ -10,4 +10,6 @@ A micro project that uses React to build a calculator.
 
 ## Deployment
 
-- [Deployment with Tiiny Host](https://alyap-react-calculator.tiiny.site/)
+[Deployment with Tiiny Host](https://alyap-react-calculator.tiiny.site/)
+
+- Simple drag and drop deployment for static website, support React build as well - just drag and drop the build zip file.
